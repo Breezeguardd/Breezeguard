@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: replace breezeguard.netlify.app with your own domain after you host the site
+Sitemap: https://breezeguard.netlify.app/sitemap.xml

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Cart &amp; Checkout — Breezeguard</title>
+<meta name="description" content="Review your Breezeguard order, choose your delivery method and pay with GCash, Maya, bank transfer, card, or cash on delivery.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#061310">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="17" stroke="#8cf0b6" stroke-width="4" stroke-dasharray="84 23" stroke-linecap="round"/><path d="M32 46C32 30 42 20 52 19C52 33 44 44 32 46Z" fill="#3fd68c"/><path d="M32 46C38 41 44 33 49 24" stroke="#061310" stroke-width="2.6" stroke-linecap="round"/></svg></span>
+      <span class="brand-txt"><b>Breezeguard</b><small>DIY Mosquito Coil</small></span>
+    </a>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="help.html">Payments &amp; Delivery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-tools">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle day or night mode"></button>
+      <a class="icon-btn" href="cart.html" data-open-cart data-cart-link aria-label="Cart page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4h2.3l2.4 11.3a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 7.5H5.6"/><circle cx="10" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+      <button class="icon-btn burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"><span>01</span> Home</a>
+  <a href="products.html"><span>02</span> Products</a>
+  <a href="about.html"><span>03</span> About Us</a>
+  <a href="help.html"><span>04</span> Payments &amp; Delivery</a>
+  <a href="contact.html"><span>05</span> Contact</a>
+  <p class="mm-foot">Questions? <a href="contact.html" style="color:var(--brand)">hello@breezeguard.ph</a></p>
+</div>
+
+<main id="main" class="sec-tight">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <span>Cart &amp; checkout</span></div>
+    <h1 style="font-size:clamp(2rem,4.5vw,3.2rem)">Your <em class="grad-text">cart</em></h1>
+
+    <!-- checkout steps -->
+    <div class="steps-nav" style="margin-top:26px">
+      <span class="step-pill on"><i>1</i> Delivery details</span>
+      <span class="step-sep"></span>
+      <span class="step-pill"><i>2</i> Payment</span>
+      <span class="step-sep"></span>
+      <span class="step-pill"><i>3</i> Review &amp; place order</span>
+    </div>
+
+    <div class="cart-layout">
+      <!-- LEFT -->
+      <div>
+        <div data-cart-items></div>
+
+        <div class="co-flow" style="margin-top:26px">
+          <h2 class="sr-only">Checkout</h2>
+          <!-- STEP 1 — DELIVERY -->
+          <section class="co-panel on" id="panel-delivery">
+            <div class="card">
+              <h3 style="font-size:1.15rem">Where should we deliver?</h3>
+              <p style="font-size:.9rem;margin:6px 0 20px">We ship nationwide. Metro Manila orders usually arrive in 1–2 days.</p>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="co-name">Full name</label>
+                  <input class="input" id="co-name" type="text" placeholder="Juan Dela Cruz" data-req="required">
+                  <span class="err-msg">Please enter your name.</span>
+                </div>
+                <div class="field">
+                  <label for="co-phone">Mobile number</label>
+                  <input class="input" id="co-phone" type="tel" placeholder="09XX XXX XXXX" data-req="phone">
+                  <span class="err-msg">Enter a valid PH mobile number (09XXXXXXXXX).</span>
+                </div>
+                <div class="field full">
+                  <label for="co-email">Email address</label>
+                  <input class="input" id="co-email" type="email" placeholder="you@email.com" data-req="email">
+                  <span class="err-msg">Enter a valid email address.</span>
+                </div>
+                <div class="field full">
+                  <label for="co-address">Street address</label>
+                  <input class="input" id="co-address" type="text" placeholder="House no, street, barangay" data-req="required">
+                  <span class="err-msg">We need your address to deliver.</span>
+                </div>
+                <div class="field">
+                  <label for="co-city">City / Municipality</label>
+                  <input class="input" id="co-city" type="text" placeholder="Cagayan de Oro City" data-req="required">
+                  <span class="err-msg">Required.</span>
+                </div>
+                <div class="field">
+                  <label for="co-zip">ZIP code</label>
+                  <input class="input" id="co-zip" type="text" placeholder="4-digit ZIP" data-req="zip" inputmode="numeric" maxlength="4">
+                  <span class="err-msg">Enter a 4-digit ZIP code.</span>
+                </div>
+                <div class="field full">
+                  <label for="co-notes">Delivery notes (optional)</label>
+                  <textarea class="input" id="co-notes" rows="3" placeholder="Landmark, guard house, best time to deliver…"></textarea>
+                </div>
+              </div>
+              <div class="buy-row">
+                <button class="btn btn-primary btn-lg" data-next>Continue to payment
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                </button>
+                <a class="btn btn-ghost" href="products.html">Keep shopping</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- STEP 2 — PAYMENT -->
+          <section class="co-panel" id="panel-payment">
+            <div class="card">
+              <h3 style="font-size:1.15rem">Delivery method</h3>
+              <div class="choice-grid mt-s">
+                <label class="choice" data-ship-option="metro">
+                  <input type="radio" name="ship" value="metro" checked data-req="required">
+                  <span class="dot"></span>
+                  <span><strong>Metro Manila courier — ₱59</strong><small>1–2 working days · Metro Manila only · free over ₱1,500</small></span>
+                </label>
+                <label class="choice" data-ship-option="provincial">
+                  <input type="radio" name="ship" value="provincial" data-req="required">
+                  <span class="dot"></span>
+                  <span><strong>Provincial courier — ₱129</strong><small>3–5 working days · Luzon, Visayas, Mindanao · free over ₱1,500</small></span>
+                </label>
+                <label class="choice" data-ship-option="pickup">
+                  <input type="radio" name="ship" value="pickup" data-req="required">
+                  <span class="dot"></span>
+                  <span><strong>Pick up at our shop — FREE</strong><small>PHINMA-COC Campus, Cagayan de Oro City · ready in 24 hours</small></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:16px">
+              <h3 style="font-size:1.15rem">Payment method</h3>
+              <div class="choice-grid mt-s">
+                <label class="choice">
+                  <input type="radio" name="payment" value="gcash" data-label="GCash" checked>
+                  <span class="dot"></span>
+                  <span><strong>GCash</strong><small>Pay from your GCash wallet. We send a payment link within minutes.</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="payment" value="maya" data-label="Maya">
+                  <span class="dot"></span>
+                  <span><strong>Maya</strong><small>Maya wallet or linked card. Instant confirmation.</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="payment" value="bank" data-label="Bank transfer (BPI / BDO)">
+                  <span class="dot"></span>
+                  <span><strong>Bank transfer</strong><small>BPI or BDO. Order is reserved for 24 hours while you transfer.</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="payment" value="card" data-label="Credit / debit card">
+                  <span class="dot"></span>
+                  <span><strong>Credit or debit card</strong><small>Visa, Mastercard, JCB. Processed on a secure checkout page.</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="payment" value="cod" data-label="Cash on delivery">
+                  <span class="dot"></span>
+                  <span><strong>Cash on delivery</strong><small>Pay the courier when your parcel arrives. Metro Manila only.</small></span>
+                </label>
+              </div>
+              <p class="hint mt-s">🔒 This is a demo store for a class project — no real payment is taken and no card details are requested.</p>
+            </div>
+
+            <div class="buy-row">
+              <button class="btn btn-primary btn-lg" data-to-review>Review order
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+              </button>
+              <button class="btn btn-ghost" data-back>Back</button>
+            </div>
+          </section>
+
+          <!-- STEP 3 — REVIEW -->
+          <section class="co-panel" id="panel-review">
+            <div class="card" data-review></div>
+            <div class="buy-row">
+              <button class="btn btn-primary btn-lg" data-place-order>Place order</button>
+              <button class="btn btn-ghost" data-back>Back</button>
+            </div>
+          </section>
+        </div>
+
+        <!-- ORDER CONFIRMATION -->
+        <div data-order-done style="display:none"></div>
+      </div>
+
+      <!-- RIGHT — SUMMARY -->
+      <aside class="summary">
+        <h2 style="font-size:1.1rem;font-family:var(--font-b);letter-spacing:0">Order summary</h2>
+        <div class="mt-s" data-cart-summary></div>
+
+        <div class="coupon">
+          <label class="sr-only" for="coupon">Coupon code</label>
+          <input class="input" id="coupon" type="text" placeholder="Coupon code" data-coupon-input>
+          <button class="btn btn-dark" data-coupon>Apply</button>
+        </div>
+        <span class="coupon-ok" data-coupon-msg></span>
+        <p class="hint mt-s" data-free-ship-note>Try <b>BREEZE10</b> for 10% off. Free shipping automatically applies over ₱1,500.</p>
+
+        <div class="pay-grid mt-m" style="grid-template-columns:repeat(2,1fr)">
+          <span class="pay-tile"><span class="logo-mini gcash">G</span> GCash</span>
+          <span class="pay-tile"><span class="logo-mini maya">M</span> Maya</span>
+          <span class="pay-tile"><span class="logo-mini bpi">BPI</span> BPI</span>
+          <span class="pay-tile"><span class="logo-mini cod">₱</span> COD</span>
+        </div>
+
+        <div class="trust-row" style="margin-top:22px">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 30-day returns</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 1-year warranty</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="17" stroke="#8cf0b6" stroke-width="4" stroke-dasharray="84 23" stroke-linecap="round"/><path d="M32 46C32 30 42 20 52 19C52 33 44 44 32 46Z" fill="#3fd68c"/><path d="M32 46C38 41 44 33 49 24" stroke="#061310" stroke-width="2.6" stroke-linecap="round"/></svg></span>
+        <span class="brand-txt"><b>Breezeguard</b><small>DIY Mosquito Coil</small></span>
+      </a>
+      <p class="mt-s" style="max-width:36ch;font-size:.92rem">Hand-built mosquito coil holders for Filipino homes. Made with a soldering iron, a 3D printer, and a lot of late nights.</p>
+      <div class="socials mt-m">
+        <a href="https://facebook.com/breezeguard" target="_blank" rel="noopener" aria-label="Breezeguard on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-2.9h-2.8V9.3c0-.8.2-1.4 1.5-1.4h1.4V5.2c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.3-3.8 3.8v2.2H8v2.9h2.4v7z"/></svg></a>
+        <a href="https://instagram.com/breezeguard" target="_blank" rel="noopener" aria-label="Breezeguard on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://tiktok.com/@breezeguard" target="_blank" rel="noopener" aria-label="Breezeguard on TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.6 3c.3 2.2 1.7 3.6 4 3.9v2.5c-1.5 0-2.9-.5-4-1.4v5.7a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.6a3.1 3.1 0 1 0 2.2 3V3z"/></svg></a>
+        <a href="https://wa.me/639170000000" target="_blank" rel="noopener" aria-label="Chat with Breezeguard on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M4 5.6A2.6 2.6 0 0 1 6.6 3h10.8A2.6 2.6 0 0 1 20 5.6v7.8a2.6 2.6 0 0 1-2.6 2.6H12l-4.6 3.4.9-3.4H6.6A2.6 2.6 0 0 1 4 13.4z"/><path d="M9 8.6c0 3 2.4 5.4 5.4 5.4.9 0 1.6-.6 1.6-1.3l-1.7-.6-.8 1c-1.1-.5-2-1.4-2.5-2.5l1-.8-.6-1.7c-.7 0-1.4.7-1.4 1.5z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+    <div><h3>Shop</h3><div class="foot-links">
+      <a href="products.html">All products</a><a href="products.html#classic">Breezeguard Classic</a>
+      <a href="products.html#twin">Twin Duo</a><a href="products.html#refill">Refill coils</a><a href="cart.html">Your cart</a>
+    </div></div>
+    <div><h3>Company</h3><div class="foot-links">
+      <a href="about.html">About us</a><a href="contact.html">Contact us</a>
+      <a href="help.html">Payments &amp; delivery</a><a href="help.html#returns">Returns &amp; refunds</a><a href="help.html#faq">FAQ</a>
+    </div></div>
+    <div><h3>Contact</h3><div class="foot-links">
+      <a href="mailto:hello@breezeguard.ph">hello@breezeguard.ph</a>
+      <a href="tel:+639170000000">+63 917 000 0000</a>
+      <a href="https://maps.app.goo.gl/oaxQXA5ccUFb9wtW6" target="_blank" rel="noopener">PHINMA-COC Campus<br>Cagayan de Oro City</a>
+      <span style="color:var(--tx-3);font-size:.85rem">Mon–Sat, 9:00–18:00</span>
+    </div></div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span data-year>2026</span> Breezeguard. Student project for MKT 046 — E-Commerce &amp; Digital Marketing. Demo store: no real payments are processed.</span>
+    <div class="pay-strip"><span>GCash</span><span>Maya</span><span>BPI</span><span>BDO</span><span>VISA</span><span>COD</span></div>
+  </div>
+</footer>
+
+<div class="scrim" aria-hidden="true"></div>
+<aside class="drawer" aria-label="Your cart">
+  <div class="drawer-head">
+    <h3 style="font-size:1.1rem">Your cart</h3>
+    <button class="icon-btn" data-close-cart aria-label="Close cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="drawer-body" data-drawer-body></div>
+  <div class="drawer-foot" data-drawer-foot></div>
+</aside>
+
+<div class="toasts" aria-live="polite"></div>
+<button class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
